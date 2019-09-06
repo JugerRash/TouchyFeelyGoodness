@@ -14,6 +14,9 @@
 		35DE36CC232275F000F3F285 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35DE36CA232275F000F3F285 /* LaunchScreen.storyboard */; };
 		35DE36D9232278B200F3F285 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DE36D8232278B200F3F285 /* NoteCell.swift */; };
 		35DE36DB2322799300F3F285 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DE36DA2322799300F3F285 /* Contants.swift */; };
+		35DE36DD23227CCC00F3F285 /* LockStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DE36DC23227CCC00F3F285 /* LockStatus.swift */; };
+		35DE36DF23227CFA00F3F285 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DE36DE23227CFA00F3F285 /* Note.swift */; };
+		35DE36E123227D6700F3F285 /* NotesObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DE36E023227D6700F3F285 /* NotesObjects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		35DE36CD232275F000F3F285 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35DE36D8232278B200F3F285 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		35DE36DA2322799300F3F285 /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		35DE36DC23227CCC00F3F285 /* LockStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockStatus.swift; sourceTree = "<group>"; };
+		35DE36DE23227CFA00F3F285 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		35DE36E023227D6700F3F285 /* NotesObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesObjects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,7 @@
 		35DE36D52322776800F3F285 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				35DE36DE23227CFA00F3F285 /* Note.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,6 +105,7 @@
 		35DE36D62322776E00F3F285 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				35DE36DC23227CCC00F3F285 /* LockStatus.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -106,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				35DE36DA2322799300F3F285 /* Contants.swift */,
+				35DE36E023227D6700F3F285 /* NotesObjects.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -181,8 +190,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35DE36E123227D6700F3F285 /* NotesObjects.swift in Sources */,
 				35DE36D9232278B200F3F285 /* NoteCell.swift in Sources */,
 				35DE36C4232275DC00F3F285 /* NoteVC.swift in Sources */,
+				35DE36DD23227CCC00F3F285 /* LockStatus.swift in Sources */,
+				35DE36DF23227CFA00F3F285 /* Note.swift in Sources */,
 				35DE36C2232275DC00F3F285 /* AppDelegate.swift in Sources */,
 				35DE36DB2322799300F3F285 /* Contants.swift in Sources */,
 			);
