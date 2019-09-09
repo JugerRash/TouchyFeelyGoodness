@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35161920232642460010C514 /* NoteDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516191F232642460010C514 /* NoteDetailVC.swift */; };
+		3516192223264A050010C514 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516192123264A050010C514 /* Helper.swift */; };
 		35DE36C2232275DC00F3F285 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DE36C1232275DC00F3F285 /* AppDelegate.swift */; };
 		35DE36C4232275DC00F3F285 /* NoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DE36C3232275DC00F3F285 /* NoteVC.swift */; };
 		35DE36C7232275DC00F3F285 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35DE36C5232275DC00F3F285 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3516191F232642460010C514 /* NoteDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailVC.swift; sourceTree = "<group>"; };
+		3516192123264A050010C514 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		35DE36BE232275DC00F3F285 /* TouchyFeelyGoodness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchyFeelyGoodness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35DE36C1232275DC00F3F285 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35DE36C3232275DC00F3F285 /* NoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVC.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				35DE36C3232275DC00F3F285 /* NoteVC.swift */,
+				3516191F232642460010C514 /* NoteDetailVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 			children = (
 				35DE36DA2322799300F3F285 /* Contants.swift */,
 				35DE36E023227D6700F3F285 /* NotesObjects.swift */,
+				3516192123264A050010C514 /* Helper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -195,8 +201,10 @@
 				35DE36C4232275DC00F3F285 /* NoteVC.swift in Sources */,
 				35DE36DD23227CCC00F3F285 /* LockStatus.swift in Sources */,
 				35DE36DF23227CFA00F3F285 /* Note.swift in Sources */,
+				3516192223264A050010C514 /* Helper.swift in Sources */,
 				35DE36C2232275DC00F3F285 /* AppDelegate.swift in Sources */,
 				35DE36DB2322799300F3F285 /* Contants.swift in Sources */,
+				35161920232642460010C514 /* NoteDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

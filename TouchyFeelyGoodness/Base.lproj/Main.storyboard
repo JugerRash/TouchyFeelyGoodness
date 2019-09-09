@@ -18,17 +18,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BeC-EN-HJI">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BeC-EN-HJI">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteCell" rowHeight="60" id="FU2-l4-DUG" customClass="NoteCell" customModule="TouchyFeelyGoodness" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteCell" rowHeight="75" id="FU2-l4-DUG" customClass="NoteCell" customModule="TouchyFeelyGoodness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FU2-l4-DUG" id="5ez-Hl-lie">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jwj-p0-QBf">
+                                                    <rect key="frame" x="10" y="10" width="354" height="55"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lockImage" translatesAutoresizingMaskIntoConstraints="NO" id="Ngf-DR-31T">
+                                                    <rect key="frame" x="374" y="22.5" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="Sfr-dA-w8l"/>
+                                                        <constraint firstAttribute="height" constant="30" id="axg-F3-28v"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ngf-DR-31T" firstAttribute="centerY" secondItem="Jwj-p0-QBf" secondAttribute="centerY" id="FSU-Dr-PeF"/>
+                                                <constraint firstItem="Jwj-p0-QBf" firstAttribute="top" secondItem="5ez-Hl-lie" secondAttribute="top" constant="10" id="IwK-DZ-ZAH"/>
+                                                <constraint firstItem="Ngf-DR-31T" firstAttribute="leading" secondItem="Jwj-p0-QBf" secondAttribute="trailing" constant="10" id="Pie-aK-OjL"/>
+                                                <constraint firstItem="Jwj-p0-QBf" firstAttribute="leading" secondItem="5ez-Hl-lie" secondAttribute="leading" constant="10" id="QYR-Ej-FNW"/>
+                                                <constraint firstAttribute="bottom" secondItem="Jwj-p0-QBf" secondAttribute="bottom" constant="9.5" id="Wr7-dA-vaq"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ngf-DR-31T" secondAttribute="trailing" constant="10" id="kDW-cd-tHv"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lockImageView" destination="Ngf-DR-31T" id="V0v-8w-OGB"/>
+                                            <outlet property="messageLbl" destination="Jwj-p0-QBf" id="BN2-qv-kz8"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -43,6 +70,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="SecureNote" id="s2F-vR-EPc">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="P50-sN-FMc"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="i7X-Ha-XhG">
                             <color key="tintColor" red="0.91764705879999997" green="0.66274509800000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
@@ -55,6 +83,55 @@
             </objects>
             <point key="canvasLocation" x="947.82608695652186" y="18.75"/>
         </scene>
+        <!--Note DetailVC-->
+        <scene sceneID="PZm-We-1Sh">
+            <objects>
+                <viewController storyboardIdentifier="NoteDetailVC" id="8Tc-cS-Ahq" customClass="NoteDetailVC" customModule="TouchyFeelyGoodness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ghb-o4-Vf7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVW-ih-71p">
+                                <rect key="frame" x="20" y="44" width="374" height="709"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ss5-RY-yI0">
+                                <rect key="frame" x="20" y="763" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eea-8E-qT7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="LOCK NOTE">
+                                    <color key="titleColor" red="0.91764705879999997" green="0.66274509800000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="lockNoteBtnPressed:" destination="8Tc-cS-Ahq" eventType="touchUpInside" id="OH1-Rf-dRh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FGZ-Mg-s6m" firstAttribute="trailing" secondItem="QVW-ih-71p" secondAttribute="trailing" constant="20" id="2i6-u8-pm1"/>
+                            <constraint firstItem="FGZ-Mg-s6m" firstAttribute="trailing" secondItem="ss5-RY-yI0" secondAttribute="trailing" constant="20" id="2jh-xY-k4t"/>
+                            <constraint firstItem="QVW-ih-71p" firstAttribute="top" secondItem="FGZ-Mg-s6m" secondAttribute="top" id="4tS-18-PL5"/>
+                            <constraint firstItem="ss5-RY-yI0" firstAttribute="top" secondItem="QVW-ih-71p" secondAttribute="bottom" constant="10" id="MpK-aI-cdV"/>
+                            <constraint firstItem="ss5-RY-yI0" firstAttribute="leading" secondItem="FGZ-Mg-s6m" secondAttribute="leading" constant="20" id="Ogk-rt-M6T"/>
+                            <constraint firstItem="FGZ-Mg-s6m" firstAttribute="bottom" secondItem="ss5-RY-yI0" secondAttribute="bottom" constant="59" id="cXt-H6-YH0"/>
+                            <constraint firstItem="QVW-ih-71p" firstAttribute="leading" secondItem="FGZ-Mg-s6m" secondAttribute="leading" constant="20" id="sps-Tn-8E2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FGZ-Mg-s6m"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageTxtView" destination="QVW-ih-71p" id="8Li-wI-Qud"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="glr-fw-NGN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1694.2028985507247" y="18.75"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="yxm-ld-Xgc">
             <objects>
@@ -63,8 +140,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bQC-gW-U2F">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.91764705879999997" green="0.66274509800000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.91764705882352937" green="0.66274509803921566" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.91764705879999997" green="0.66274509800000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -77,4 +158,7 @@
             <point key="canvasLocation" x="13" y="19"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lockImage" width="30" height="30"/>
+    </resources>
 </document>

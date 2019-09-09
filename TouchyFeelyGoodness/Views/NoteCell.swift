@@ -9,16 +9,20 @@
 import UIKit
 
 class NoteCell: UITableViewCell {
+    
+    //Outlets -:
+    @IBOutlet private weak var messageLbl : UILabel!
+    @IBOutlet private weak var lockImageView : UIImageView!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    //Functions -:
+    func configureCell(note : Note){
+        if note.status == LockStatus.locked {
+            self.messageLbl.text = "This message is locked please unlock to read it."
+            self.lockImageView.isHidden = false
+        }else {
+            self.messageLbl.text = note.message
+            self.lockImageView.isHidden = true 
+        }
     }
 
 }
